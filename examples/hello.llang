@@ -1,0 +1,25 @@
+// Exemplo de código LambdaLang
+system.lang.LLang.class Servidor {
+  Int porta;
+  String html;
+}
+
+PointerLL var Servidor ptrServidor = &servidor;
+
+system.lang.LLang.var Servidor servidor = Servidor();
+system.lang.LLang.var Int porta = 8080;
+system.lang.LLang.var String mensagem = "<h1>Lambda Lang melhor que Java</h1>";
+
+system.lang.LLang.function Void configurarServidor() {
+  (*ptrServidor).porta = porta;
+  (*ptrServidor).html = mensagem;
+}
+
+system.lang.LLang.function Void entryPoint() {
+  system.lang.LLang.console.printLn("Configurando servidor...")
+  configurarServidor();
+  system.lang.LLang.console.printLn("Iniciando servidor HTML na porta " + (*ptrServidor).porta + "...")
+  hypertext.transfer.protocol.LambdaLang.server.create((*ptrServidor).porta, (*ptrServidor).html)
+}
+
+system.lang.LLang.invoke entryPoint();

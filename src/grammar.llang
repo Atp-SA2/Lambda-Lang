@@ -1,0 +1,30 @@
+// Definição da gramática inicial da LambdaLang (pseudo-BNF)
+// Esta gramática cobre classes, métodos, atributos, modificadores e tipos primitivos
+
+/*
+program         ::= (classDecl | interfaceDecl | statement)*
+classDecl       ::= modifiers 'class' IDENT (':' IDENT (',' IDENT)*)? '{' classBody '}'
+interfaceDecl   ::= modifiers 'interface' IDENT '{' interfaceBody '}'
+classBody       ::= (fieldDecl | methodDecl | constructorDecl | statement)*
+fieldDecl       ::= modifiers type IDENT ('=' expression)? ';'
+methodDecl      ::= modifiers type IDENT '(' params ')' block
+constructorDecl ::= modifiers IDENT '(' params ')' block
+params          ::= param (',' param)*
+param           ::= type IDENT
+modifiers       ::= (modifier)*
+modifier        ::= 'public' | 'private' | 'protected' | 'internal' | 'abstract' | 'static' | 'override' | 'final'
+type            ::= 'Int' | 'Float' | 'Bool' | 'Char' | 'String' | IDENT
+statement       ::= ... // statements como if, for, while, etc.
+expression      ::= ... // expressões
+*/
+
+// Exemplo de sintaxe LambdaLang:
+// public class Animal {
+//   public String nome;
+//   public Animal(String nome) { this.nome = nome; }
+//   public void falar() { console.printLn("..."); }
+// }
+// public class Cachorro : Animal {
+//   public Cachorro(String nome) : super(nome) {}
+//   public override void falar() { console.printLn(nome + ": au au!"); }
+// }

@@ -1,0 +1,15 @@
+{
+  "name": "lambdalang",
+  "version": "0.1.0",
+  "description": "Uma linguagem de programação inspirada em Java e C#.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js examples/hello.llang"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

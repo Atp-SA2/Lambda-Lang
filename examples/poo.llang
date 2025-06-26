@@ -1,0 +1,24 @@
+// Exemplo avançado de LambdaLang com POO
+public class Animal {
+  public String nome;
+  public Animal(String nome) {
+    this.nome = nome;
+  }
+  public void falar() {
+    console.printLn("...");
+  }
+}
+
+public class Cachorro : Animal {
+  public Cachorro(String nome) : super(nome) {}
+  public override void falar() {
+    console.printLn(nome + ": au au!");
+  }
+}
+
+public class Main {
+  public static void main() {
+    Animal a = new Cachorro("Rex");
+    a.falar();
+  }
+}
