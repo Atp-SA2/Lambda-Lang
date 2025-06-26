@@ -1,0 +1,10 @@
+class Main {
+    public main() {
+        system.lang.LLang.console.printLn("Olá, mundo! Este é um Hello World verboso em LambdaLang.");
+    }
+}
+
+function entryPoint() {
+    let app = new Main();
+    app.main();
+}
